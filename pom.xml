@@ -11,6 +11,7 @@
 	<groupId>ch.hearc.maering</groupId>
 	<artifactId>LookAndBook</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>LookAndBook</name>
 	<description>Projet javaEE_qdl</description>
 
