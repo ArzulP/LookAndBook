@@ -23,7 +23,6 @@ public class Comment {
 	@Column
 	private String content;
 	
-	//pour la doc des relation utilisé: https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="ARTWORK_ID")
 	private Artwork artwork;
