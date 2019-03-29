@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Look&Book</title>
+</head>
+<body>
+    <div th:insert="fragments/header :: header"></div>
+    <div class="container">
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Author</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="artwork: ${artworks}">
+				<td th:text="${artwork.title}" />
+				<td th:text="${artwork.author}" />
+			</tr>
+		</tbody>
+	</table>
+	
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>
