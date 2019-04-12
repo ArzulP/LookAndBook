@@ -13,7 +13,7 @@ public class Category {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column
-    private Integer id;
+    private Long id;
 	
 	@Column
 	private String name;
@@ -25,7 +25,7 @@ public class Category {
 		
 	}
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 	
@@ -45,7 +45,7 @@ public class Category {
 		this.description = description;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 }
