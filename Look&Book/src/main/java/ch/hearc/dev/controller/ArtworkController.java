@@ -17,7 +17,7 @@ public class ArtworkController {
 	@GetMapping("/artworks")
     public String getAll(Map<String, Object> model) {
 		
-		//model.put("artworks", artworkRepository.findAll());
+		model.put("artworks", artworkRepository.findAll());
 		
         return "artwork";
 	}

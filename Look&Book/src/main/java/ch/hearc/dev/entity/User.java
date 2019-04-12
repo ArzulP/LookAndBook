@@ -13,7 +13,7 @@ public class User {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column
-    private Integer id;
+    private Long id;
 	
 	@Column
 	private String name;
@@ -25,7 +25,7 @@ public class User {
 		
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
@@ -44,7 +44,7 @@ public class User {
 	public void setRight_type(String right_type) {
 		this.right_type = right_type;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 }
