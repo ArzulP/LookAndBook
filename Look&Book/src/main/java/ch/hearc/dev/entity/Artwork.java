@@ -12,6 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="artwork")
+
 public class Artwork {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -28,14 +29,14 @@ public class Artwork {
 	private String description;
 	
 	@Column
-	private String release_data;
+	private String release_data = "";
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="CATEGORY_ID")
 	private Category category;
 	
 	@Column
-	private Boolean visible;
+	private Boolean visible = false;
 	
 	
 
