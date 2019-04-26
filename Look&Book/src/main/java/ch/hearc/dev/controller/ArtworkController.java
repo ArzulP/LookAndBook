@@ -46,13 +46,14 @@ public class ArtworkController {
 	public String insertArtwork(@ModelAttribute Artwork artwork, Model model) {
 			
 		artworkService.saveArtwork(artwork);
-		
+		model.addAttribute("artworks", artworkService.findAll());
 		return "artwork";
 		
 	}
 	
-	/*@GetMapping("/artworks/{id}")
-    public String artwork(@PathVariable final String id) {
-        return "artwork";
-	}*/
+	@GetMapping("/artwork/{id}")
+    public String artwork(@PathVariable final String id, Model model) {
+		model.addAttribute("artwork", artworkService.findArtworkById(Long.parseLong(id)));
+        return "artwork-detail";
+	}
 }

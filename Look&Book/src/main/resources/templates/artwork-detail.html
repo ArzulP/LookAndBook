@@ -13,18 +13,17 @@
 			<tr>
 				<th scope="col">Title</th>
 				<th scope="col">Author</th>
-				<th scope="col">Detail</th>
+				<th scope="col">Description</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="artwork: ${artworks}">
+			<tr>
 				<td th:text="${artwork.title}" />
 				<td th:text="${artwork.author}" />
-				<td><a th:href="@{'/artwork/' + ${artwork.id}}" >get detail</a></td>
+				<td th:text="${artwork.description}" />
 			</tr>
 		</tbody>
 	</table>
-	<a href="/artwork/form">Create a new artwork entry</a>
 	
     </div>
     <div th:insert="fragments/footer :: footer"></div>
