@@ -17,11 +17,15 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="artwork: ${artworks}">
+			<span th:each="artwork: ${artworks}">
+			<span th:if="${artwork.visible == true}">
+			<tr >
 				<td th:text="${artwork.title}" />
 				<td th:text="${artwork.author}" />
 				<td><a th:href="@{'/artwork/' + ${artwork.id}}" >get detail</a></td>
 			</tr>
+			</span>
+			</span>
 		</tbody>
 	</table>
 	<a href="/artwork/form">Create a new artwork entry</a>
