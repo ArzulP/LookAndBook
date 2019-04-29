@@ -29,7 +29,7 @@ public class Comment {
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="USER_ID")
-	private User user;
+	private AppUser user;
 	
 	@Column
 	private String date;
@@ -50,7 +50,7 @@ public class Comment {
 		return artwork;
 	}
 	
-	public User getUser() {
+	public AppUser getUser() {
 		return user;
 	}
 	
@@ -63,7 +63,7 @@ public class Comment {
 		this.artwork = artwork;
 	}
 	
-	public void setUser(User user) {
+	public void setUser(AppUser user) {
 		this.user = user;
 	}
 	
