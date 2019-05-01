@@ -5,4 +5,5 @@ import ch.hearc.dev.entity.Comment;
 public interface CommentService {
 	public void saveComment(Comment comment);
 	public Iterable<Comment> findAllForArtId(Long id);
+	public void deleteById(Long id);
 }

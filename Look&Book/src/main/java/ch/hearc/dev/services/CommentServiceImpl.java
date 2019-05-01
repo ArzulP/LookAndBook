@@ -28,4 +28,9 @@ public class CommentServiceImpl implements CommentService{
 		return commentRepository.findCommentByArtId(id);
 	}
 
+	@Override
+	public void deleteById(Long id) {
+		commentRepository.deleteById(id);
+	}
+
 }

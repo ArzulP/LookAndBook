@@ -21,6 +21,11 @@
 				<td th:text="${artwork.title}" />
 				<td th:text="${artwork.author}" />
 				<td th:text="${artwork.description}" />
+				<td>
+				<form action="#" th:action="@{'/artwork/delete/' + ${artwork.id}}" th:method="post" >
+				  <button type="submit" id="submitButton">delete</button>
+				</form>
+				</td>
 			</tr>
 		</tbody>
 	</table>
@@ -35,12 +40,18 @@
 			<span th:each="comment: ${comments}">
 			<tr >
 				<td th:text="${comment.content}" />
+				<!-- faire le if ici -->
+				<td>
+				<form action="#" th:action="@{'/comment/delete/' + ${comment.id}}" th:method="post" >
+				  <button type="submit" id="submitButton">delete</button>
+				</form>
+				</td>
 			</tr>
 			</span>
 		</tbody>
 	</table>
 	
-	<form action="#" th:action="@{/comment/insert}" th:object="${newComment}" method="post">
+	<form action="#" th:action="@{'/comment/insert/'+ ${artwork.id}}" th:object="${newComment}" method="post">
     	<p>Content: <input type="text" th:field="*{content}" /></p>
     	<input type="hidden" th:value="${artwork.id}" name="artwork" >
     	

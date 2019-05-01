@@ -40,7 +40,7 @@ public class ArtworkController {
 	}
 	
 	@GetMapping("/artwork/form")
-	public String personForm(Model model) {
+	public String artworkForm(Model model) {
 
 		model.addAttribute("categories", categoryService.findAll());
 		model.addAttribute("artwork", new Artwork());
@@ -52,8 +52,8 @@ public class ArtworkController {
 	public String insertArtwork(@ModelAttribute Artwork artwork, Model model) {
 			
 		artworkService.saveArtwork(artwork);
-		model.addAttribute("artworks", artworkService.findAll());
-		return "artwork";
+		
+		return "redirect:/artworks";
 		
 	}
 	
@@ -65,5 +65,11 @@ public class ArtworkController {
 		//temporary
 		model.addAttribute("user", new User());
         return "artwork-detail";
+	}
+	
+	@PostMapping("/artwork/delete/{id}")
+	private String deleteArtwork(@PathVariable final String id){
+		artworkService.deleteById(Long.parseLong(id));
+	    return "redirect:/artworks";
 	}
 }

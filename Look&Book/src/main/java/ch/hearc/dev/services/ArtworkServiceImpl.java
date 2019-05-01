@@ -31,5 +31,10 @@ public class ArtworkServiceImpl implements ArtworkService{
 	public Artwork findArtworkById(long id) {
 		return artworkRepository.findById(id).get();
 	}
+	
+	@Override
+	public void deleteById(Long id) {
+		artworkRepository.deleteById(id);
+	}
 
 }

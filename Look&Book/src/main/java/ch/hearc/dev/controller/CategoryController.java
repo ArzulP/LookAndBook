@@ -23,7 +23,7 @@ public class CategoryController {
 	private CategoryService categoryService;
 	
 	@GetMapping("/category/form")
-	public String personForm(Model model) {
+	public String categoryForm(Model model) {
 		
 		model.addAttribute("category", new Category());
 		

@@ -23,11 +23,18 @@ public class CommentController {
 	@Autowired
 	private CommentService commentService;
 	
-	@PostMapping("/comment/insert")
-	public String insertArtwork(@ModelAttribute Comment comment, Model model) {
+	@PostMapping("/comment/insert/{id}")
+	public String insertComment(@PathVariable final String id, @ModelAttribute Comment comment, Model model) {
 			
 		commentService.saveComment(comment);
 		
-		return "index";
+		return "redirect:/artwork/{id}";
+	}
+	
+	
+	@PostMapping("/comment/delete/{id}")
+	private String deleteComment(@PathVariable final String id){
+		commentService.deleteById(Long.parseLong(id));
+	    return "redirect:/artworks";
 	}
 }
