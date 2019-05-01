@@ -5,8 +5,7 @@
 </head>
  
 <body>
-    <!-- Include _menu.html -->
-    <th:block th:include="/_menu"></th:block>
+    <div th:replace="fragments/header :: header"></div>
  
     <h3 th:if="${message != null}" th:utext="${message}" style="color: red;"></h3>
  
