@@ -61,7 +61,7 @@ public class ArtworkController {
     public String artwork(@PathVariable final String id, Model model) {
 		model.addAttribute("artwork", artworkService.findArtworkById(Long.parseLong(id)));
 		model.addAttribute("comments", commentService.findAllForArtId(Long.parseLong(id)));
-		model.addAttribute("comment", new Comment());
+		model.addAttribute("newComment", new Comment());
 		//temporary
 		model.addAttribute("user", new User());
         return "artwork-detail";

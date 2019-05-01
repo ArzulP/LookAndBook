@@ -12,7 +12,6 @@ import ch.hearc.dev.entity.Comment;
 
 @Repository("commentRepository")
 public interface CommentRepository extends JpaRepository <Comment, Long>{
-	//https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-introduction-to-query-methods/
 	 @Query("SELECT c FROM Comment c where c.artwork.id = :id")
 	 public List<Comment> findCommentByArtId(@Param("id") Long id);
 	

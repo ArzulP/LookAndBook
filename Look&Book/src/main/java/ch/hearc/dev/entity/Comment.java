@@ -27,9 +27,9 @@ public class Comment {
 	@JoinColumn(name="ARTWORK_ID")
 	private Artwork artwork;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	/*@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="USER_ID")
-	private User user;
+	private User user;*/
 	
 	@Column
 	private String date = "";
@@ -50,9 +50,9 @@ public class Comment {
 		return artwork;
 	}
 	
-	public User getUser() {
+	/*public User getUser() {
 		return user;
-	}
+	}*/
 	
 
 	public void setContent(String content) {
@@ -63,9 +63,9 @@ public class Comment {
 		this.artwork = artwork;
 	}
 	
-	public void setUser(User user) {
+	/*public void setUser(User user) {
 		this.user = user;
-	}
+	}*/
 	
 	public void setId(Long id) {
 		this.id = id;
