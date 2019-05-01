@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import ch.hearc.dev.auth.model.User;
+
 @Entity
 @Table(name="comment")
 public class Comment {
@@ -29,7 +31,7 @@ public class Comment {
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="USER_ID")
-	private AppUser user;
+	private User user;
 	
 	@Column
 	private String date;
@@ -50,7 +52,7 @@ public class Comment {
 		return artwork;
 	}
 	
-	public AppUser getUser() {
+	public User getUser() {
 		return user;
 	}
 	
@@ -63,7 +65,7 @@ public class Comment {
 		this.artwork = artwork;
 	}
 	
-	public void setUser(AppUser user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 	

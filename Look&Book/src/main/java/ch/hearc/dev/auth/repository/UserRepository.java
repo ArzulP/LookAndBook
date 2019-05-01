@@ -1,0 +1,8 @@
+package ch.hearc.dev.auth.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import ch.hearc.dev.auth.model.User;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
+}

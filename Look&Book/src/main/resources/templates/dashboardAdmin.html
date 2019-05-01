@@ -44,8 +44,8 @@
       						</div>
       					</div>
       					<div class="list-group">
-							<div class="list-goup-item list-group-item-action" href="#">
-								
+							<div class="list-goup-item list-group-item-action" th:each="category: ${categories}" href="#">
+								<span th:text="${category.name}"></span>	
 							</div>
 						</div>
       				</div>
