@@ -11,8 +11,8 @@ import ch.hearc.dev.services.CategoryService;
 @Controller
 public class AdminController {
 		
-	@GetMapping("/admin/dashboard")
-    public String aministration() {		
+	@GetMapping("/dashboard")
+    public String aministration(Model model) {		
 		return "dashboardAdmin";
     }
 }
