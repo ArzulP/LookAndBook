@@ -32,7 +32,7 @@ public class Comment {
 	private User user;
 	
 	@Column
-	private String date;
+	private String date = "";
 
 	public Comment() {
 		

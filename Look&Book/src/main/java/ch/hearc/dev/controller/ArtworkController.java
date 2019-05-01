@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.dev.entity.Artwork;
+import ch.hearc.dev.entity.Comment;
+import ch.hearc.dev.entity.User;
 import ch.hearc.dev.repository.ArtworkRepository;
 import ch.hearc.dev.services.ArtworkService;
 import ch.hearc.dev.services.CategoryService;
+import ch.hearc.dev.services.CommentService;
 
 
 @Controller
@@ -25,6 +28,9 @@ public class ArtworkController {
 	
 	@Autowired
 	private CategoryService categoryService;
+	
+	@Autowired
+	private CommentService commentService;
 	
 	@GetMapping("/artworks")
     public String getAll(Model model) {
@@ -54,6 +60,10 @@ public class ArtworkController {
 	@GetMapping("/artwork/{id}")
     public String artwork(@PathVariable final String id, Model model) {
 		model.addAttribute("artwork", artworkService.findArtworkById(Long.parseLong(id)));
+		model.addAttribute("comments", commentService.findAllForArtId(Long.parseLong(id)));
+		model.addAttribute("comment", new Comment());
+		//temporary
+		model.addAttribute("user", new User());
         return "artwork-detail";
 	}
 }
