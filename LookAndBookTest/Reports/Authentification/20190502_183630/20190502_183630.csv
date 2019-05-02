@@ -1,0 +1,19 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Authentification,Firefox 66.0,,2019-05-02 18:36:33,2019-05-02 18:36:48,15.489s,PASSED
+,,,,,,
+Test Cases/RegisterLoginTestCase,Firefox 66.0,,2019-05-02 18:36:33,2019-05-02 18:36:42,8.935s,PASSED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 18:36:34,2019-05-02 18:36:40,5.558s,PASSED
+"navigateToUrl(""http://localhost:8080/registration"")",Firefox 66.0,,2019-05-02 18:36:40,2019-05-02 18:36:40,0.237s,PASSED
+"setText(findTestObject(""Page_Register/input_Register_username""), ""username1"")",Firefox 66.0,,2019-05-02 18:36:40,2019-05-02 18:36:40,0.167s,PASSED
+"setEncryptedText(findTestObject(""Page_Register/input_Register_password""), ""M1Lnyl0phgn1JV2kuvT1pw=="")",Firefox 66.0,,2019-05-02 18:36:40,2019-05-02 18:36:40,0.214s,PASSED
+"setEncryptedText(findTestObject(""Page_Register/input_Register_passwordConfirm""), ""M1Lnyl0phgn1JV2kuvT1pw=="")",Firefox 66.0,,2019-05-02 18:36:40,2019-05-02 18:36:40,0.086s,PASSED
+"click(findTestObject(""Page_Register/button_register""))",Firefox 66.0,,2019-05-02 18:36:40,2019-05-02 18:36:41,0.922s,PASSED
+closeBrowser(),Firefox 66.0,,2019-05-02 18:36:41,2019-05-02 18:36:42,0.951s,PASSED
+,,,,,,
+Test Cases/LoginTestCase,Firefox 66.0,,2019-05-02 18:36:42,2019-05-02 18:36:48,5.282s,PASSED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 18:36:43,2019-05-02 18:36:46,3.605s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Firefox 66.0,,2019-05-02 18:36:46,2019-05-02 18:36:47,0.320s,PASSED
+"click(findTestObject(""Page_Look a Book/a_Login""))",Firefox 66.0,,2019-05-02 18:36:47,2019-05-02 18:36:47,0.191s,PASSED
+"setText(findTestObject(""Page_Login/input_Login_username""), ""username1"")",Firefox 66.0,,2019-05-02 18:36:47,2019-05-02 18:36:47,0.131s,PASSED
+"setEncryptedText(findTestObject(""Page_Login/input_Login_password""), ""M1Lnyl0phgn1JV2kuvT1pw=="")",Firefox 66.0,,2019-05-02 18:36:47,2019-05-02 18:36:47,0.123s,PASSED
+"click(findTestObject(""Page_Login/button_Log in""))",Firefox 66.0,,2019-05-02 18:36:47,2019-05-02 18:36:48,0.417s,PASSED

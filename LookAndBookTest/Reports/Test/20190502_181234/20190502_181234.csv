@@ -1,0 +1,7 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Test,Firefox 66.0,,2019-05-02 18:12:39,2019-05-02 18:12:52,12.413s,PASSED
+,,,,,,
+Test Cases/FirstTest,Firefox 66.0,First try at a test,2019-05-02 18:12:40,2019-05-02 18:12:51,11.633s,PASSED
+openBrowser(null),Firefox 66.0,,2019-05-02 18:12:41,2019-05-02 18:12:49,8.331s,PASSED
+"navigateToUrl(""http://localhost:8080/registration"")",Firefox 66.0,,2019-05-02 18:12:49,2019-05-02 18:12:50,0.640s,PASSED
+closeBrowser(),Firefox 66.0,,2019-05-02 18:12:50,2019-05-02 18:12:51,1.620s,PASSED
