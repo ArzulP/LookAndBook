@@ -22,6 +22,9 @@
 				<td th:text="${artwork.author}" />
 				<td th:text="${artwork.description}" />
 				<td>
+				<form action="#" th:action="@{'/artwork/update/' + ${artwork.id}}" th:method="post" >
+				  <button type="submit" id="submitButton">Make visible</button>
+				</form>
 				<form action="#" th:action="@{'/artwork/delete/' + ${artwork.id}}" th:method="post" >
 				  <button type="submit" id="submitButton">delete</button>
 				</form>

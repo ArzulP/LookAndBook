@@ -69,4 +69,13 @@ public class ArtworkController {
 		artworkService.deleteById(Long.parseLong(id));
 	    return "redirect:/artworks";
 	}
+	
+	@PostMapping("/artwork/update/{id}")
+	private String updateArtwork(@PathVariable final String id){
+		Artwork artwork = artworkService.findArtworkById(Long.parseLong(id));
+		artwork.setVisible(true);
+		
+		artworkService.saveArtwork(artwork);
+	    return "redirect:/artworks";
+	}
 }
