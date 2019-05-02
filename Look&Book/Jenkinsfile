@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                katalon -noSplash  -runMode=console -projectPath="LookAndBookTest\LookAndBookTest.prj" -retry=0 -testSuitePath="Test Suites/Authentification" -executionProfile="default" -browserType="Web Service"
+                katalon -noSplash  -runMode=console -projectPath="LookAndBookTest/LookAndBookTest.prj" -retry=0 -testSuitePath="Test Suites/Authentification" -executionProfile="default" -browserType="Web Service"
             }
         }
         stage('Test') {
