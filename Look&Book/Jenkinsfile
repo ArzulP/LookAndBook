@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                ./katalon -noSplash  -runMode=console -projectPath="LookAndBookTest\LookAndBookTest.prj" -retry=0 -testSuitePath="Test Suites/Authentification" -executionProfile="default" -browserType="Web Service"
             }
         }
         stage('Deploy') {
