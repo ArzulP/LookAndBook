@@ -38,7 +38,7 @@ public class ArtworkController {
         return "artwork";
 	}
 	
-	@GetMapping("/artwork/form")
+	@GetMapping("/artwork-form")
 	public String artworkForm(Model model) {
 
 		model.addAttribute("categories", categoryService.findAll());

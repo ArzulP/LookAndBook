@@ -6,20 +6,36 @@
 <link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-	<nav th:replace="fragments/header :: header"></nav>
-    <div class="container">
-
-	<h1>Form</h1>
-    <form action="#" th:action="@{/category/insert}" th:object="${category}" method="post">
-    	<p>Name: <input type="text" th:field="*{name}" /></p>
-        <p>Description: <input type="text" th:field="*{description}" /></p>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-    </form>
-    
-    </div>
-    <div th:insert="fragments/footer :: footer"></div>
+    <nav th:replace="fragments/header :: header"></nav>	
+	<div class="container">
+		<div class="row justify-content-center align-items-center" style="height:100vh">
+           	<div class="col-4">
+           		<div class="card">
+           			<div class="card-head text-center">
+           				<h1 class="text-center">Category Form</h1>
+           			</div>
+                   	<div class="card-body">
+						<form th:action="@{/category/insert}" th:object="${category}" method="post">
+							<div class="form-group">
+								<label for="inputCatName">Name</label>
+				    			<input id="inputCatName" class="form-control" type="text" placeholder="Category name" autofocus="true" required  th:field="*{name}">
+							</div>
+							<div class="form-group">
+								<label for="inputCatDescription">Description</label>
+				    			<input id="inputCatDescription" class="form-control" type="text" placeholder="Description"  th:field="*{description}">
+				    		</div>
+				    		<div class="form-group">
+				    			<button class="btn btn-primary" type="submit">Submit</button>
+				    			<input class="btn" type="reset" value="Reset">
+							</div>
+				      	</form>
+			      	</div>
+		      	</div>
+	      	</div>
+      	</div>
+	</div>
+	<footer th:replace="fragments/footer :: footer"></footer>   
 </body>
 </html>

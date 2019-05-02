@@ -21,7 +21,7 @@ public class CategoryController {
 	@Autowired
 	private CategoryService categoryService;
 	
-	@GetMapping("/category/form")
+	@GetMapping("/category-form")
 	public String categoryForm(Model model) {
 		
 		model.addAttribute("category", new Category());

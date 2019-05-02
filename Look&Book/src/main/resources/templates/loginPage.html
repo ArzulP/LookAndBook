@@ -8,15 +8,6 @@
    	</head>
    	<body>
 		<nav th:replace="fragments/header :: header"></nav>		 
-		<!-- /login?error=true -->
-		<div th:if="${#request.getParameter('error') == 'true'}"style="color:red;margin:10px 0px;">
-		   	Login Failed!!!<br />
-		   	Reason :
-		   	<span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"
-		      th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION').message}">
-		          Static summary
-		   	</span> 
-		</div>
 		<div class="container">
 			<div class="row justify-content-center align-items-center" style="height:100vh">
             	<div class="col-4">
@@ -46,14 +37,7 @@
 		      	</div>
 	      	</div>
 		</div>
-       
-      <br/>
-      Username/pass:
-      <ul>
-        <li>dbuser1/123</li>
-        <li>dbadmin1/123</li>
-      </ul>  
-       
-   </body>
+		<footer th:replace="fragments/footer :: footer"></footer>
+    </body>
     
 </html>

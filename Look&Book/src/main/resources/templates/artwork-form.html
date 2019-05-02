@@ -2,32 +2,56 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add new Book</title>
+<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div th:insert="fragments/header :: header"></div>
-    <div class="container">
-
-
-	<h1>Form</h1>
-    <form action="#" th:action="@{/artwork/insert}" th:object="${artwork}" method="post">
-    	<p>Title: <input type="text" th:field="*{title}" /></p>
-        <p>Author: <input type="text" th:field="*{author}" /></p>
-        <p>Description: <textarea th:field="*{description}" ></textarea></p>
-        
-        <select th:field="*{category}">
-		  <option 
-		      th:each="category: ${categories}"
-		      th:value="${category.id}"
-		      th:text="${category.name}" ></option>
-		</select>
-		<p><!-- debug only -->Visible: <input type="checkbox" value="true" th:field="*{visible}"/></p>
-		
-		<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-    </form>
-    
+	<nav th:replace="fragments/header :: header"></nav>	
+	<div class="container">
+		<div class="row justify-content-center align-items-center" style="height:100vh">
+           	<div class="col-4">
+       			<div class="text-center">
+       				<h1 class="text-center">Book Form</h1>
+       			</div>
+				<form th:action="@{/artwork/insert}" th:object="${artwork}" method="post">
+					<div class="form-group">
+						<label for="inputArtTitle">Title</label>
+		    			<input id="inputArtTitle" class="form-control" type="text" placeholder="Book title" autofocus="true" required  th:field="*{title}">
+					</div>
+					<div class="form-group">
+						<label for="inputArtAuthor">Author</label>
+		    			<input id="inputArtAuthor" class="form-control" type="text" placeholder="Author name"  th:field="*{author}">
+					</div>
+					<div class="form-group">
+						<label for="inputArtDescription">Description</label>
+		    			<textarea id="inputArtDescription" class="form-control" rows="5" placeholder="Description"  th:field="*{description}"></textarea>
+		    		</div>
+		    		<div class="form-group">
+						<label for="inputArtCat">Select a category</label>
+		    			<select id="inputArtCat" class="form-control" th:field="*{category}">
+		    				<option 
+						      th:each="category: ${categories}"
+						      th:value="${category.id}"
+						      th:text="${category.name}" ></option>
+		    			</select>
+		    		</div>
+		    		<div class="form-check">
+		    		<!-- debug only -->
+						<input class="form-check-input" type="checkbox" value="" id="visibleCheck">
+						<label class="form-check-label" for="visibleCheck">
+						visible
+						</label>
+					</div>
+		    		<div class="form-group">
+		    			<button class="btn btn-primary" type="submit">Submit</button>
+		    			<input class="btn" type="reset" value="Reset">
+					</div>
+		      	</form>
+	      	</div>
+      	</div>
     </div>
-    <div th:insert="fragments/footer :: footer"></div>
-    
+	<footer th:replace="fragments/footer :: footer"></footer>   
 </body>
 </html>
