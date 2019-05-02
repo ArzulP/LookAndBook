@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Authentification" time="15" tests="2" failures="0" errors="0">
+   <testsuite name="Authentification" tests="2" failures="0" errors="0" time="15" timestamp="2019-05-02 18:36:33" hostname="paul.arzul - INF16-ARZULP.intra.eiaj.ch" id="Test Suites/Authentification">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\dev\\JavaEE\\LookAndBook\\LookAndBookTest\\Reports\\Authentification\\20190502_183630"/>
+         <property name="logFiles" value="C:\\dev\\JavaEE\\LookAndBook\\LookAndBookTest\\Reports\\Authentification\\20190502_183630\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="paul.arzul - INF16-ARZULP.intra.eiaj.ch"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.0.5.10"/>
+         <property name="browser" value="Firefox 66.0"/>
+         <property name="hostAddress" value="157.26.66.50"/>
+         <property name="sessionId" value="95961a91-759f-4eb4-9bf4-7bbbcf690999"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/RegisterLoginTestCase" classname="Test Cases/RegisterLoginTestCase" status="PASSED">
+         <system-out><![CDATA[2019-05-02 18:36:33 - [TEST_CASE][PASSED] - Test Cases/RegisterLoginTestCase: Test Cases/RegisterLoginTestCase
+
+2019-05-02 18:36:34 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 18:36:35 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2019-05-02 18:36:35 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-02 18:36:40 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 18:36:40 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/registration"): Navigate to 'http://localhost:8080/registration' successfully
+
+2019-05-02 18:36:40 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/registration' successfully
+
+2019-05-02 18:36:40 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Register/input_Register_username"), "username1"): Text 'username1' is set on object 'Object Repository/Page_Register/input_Register_username'
+
+2019-05-02 18:36:40 - [MESSAGE][PASSED] - Text 'username1' is set on object 'Object Repository/Page_Register/input_Register_username'
+
+2019-05-02 18:36:40 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Register/input_Register_password"), "M1Lnyl0phgn1JV2kuvT1pw=="): Text ****** has been set on object 'Object Repository/Page_Register/input_Register_password'
+
+2019-05-02 18:36:40 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Register/input_Register_password'
+
+2019-05-02 18:36:40 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Register/input_Register_passwordConfirm"), "M1Lnyl0phgn1JV2kuvT1pw=="): Text ****** has been set on object 'Object Repository/Page_Register/input_Register_passwordConfirm'
+
+2019-05-02 18:36:40 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Register/input_Register_passwordConfirm'
+
+2019-05-02 18:36:40 - [TEST_STEP][PASSED] - click(findTestObject("Page_Register/button_register")): Object: 'Object Repository/Page_Register/button_register' is clicked on
+
+2019-05-02 18:36:41 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Register/button_register' is clicked on
+
+2019-05-02 18:36:41 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-02 18:36:42 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/LoginTestCase" classname="Test Cases/LoginTestCase" status="PASSED">
+         <system-out><![CDATA[2019-05-02 18:36:42 - [TEST_CASE][PASSED] - Test Cases/LoginTestCase: Test Cases/LoginTestCase
+
+2019-05-02 18:36:43 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 18:36:43 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2019-05-02 18:36:46 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 18:36:46 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2019-05-02 18:36:47 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2019-05-02 18:36:47 - [TEST_STEP][PASSED] - click(findTestObject("Page_Look a Book/a_Login")): Object: 'Object Repository/Page_Look a Book/a_Login' is clicked on
+
+2019-05-02 18:36:47 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Look a Book/a_Login' is clicked on
+
+2019-05-02 18:36:47 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Login/input_Login_username"), "username1"): Text 'username1' is set on object 'Object Repository/Page_Login/input_Login_username'
+
+2019-05-02 18:36:47 - [MESSAGE][PASSED] - Text 'username1' is set on object 'Object Repository/Page_Login/input_Login_username'
+
+2019-05-02 18:36:47 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Login/input_Login_password"), "M1Lnyl0phgn1JV2kuvT1pw=="): Text ****** has been set on object 'Object Repository/Page_Login/input_Login_password'
+
+2019-05-02 18:36:47 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Login/input_Login_password'
+
+2019-05-02 18:36:47 - [TEST_STEP][PASSED] - click(findTestObject("Page_Login/button_Log in")): Object: 'Object Repository/Page_Login/button_Log in' is clicked on
+
+2019-05-02 18:36:48 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Log in' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-02 18:36:33 - [TEST_SUITE][PASSED] - Authentification: Test Cases/LoginTestCase]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Test" time="12" tests="1" failures="0" errors="0">
+   <testsuite name="Test" tests="1" failures="0" errors="0" time="12" timestamp="2019-05-02 18:12:39" hostname="paul.arzul - INF16-ARZULP.intra.eiaj.ch" id="Test Suites/Test">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\dev\\JavaEE\\LookAndBook\\LookAndBookTest\\Reports\\Test\\20190502_181234"/>
+         <property name="logFiles" value="C:\\dev\\JavaEE\\LookAndBook\\LookAndBookTest\\Reports\\Test\\20190502_181234\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="paul.arzul - INF16-ARZULP.intra.eiaj.ch"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.0.5.10"/>
+         <property name="browser" value="Firefox 66.0"/>
+         <property name="hostAddress" value="157.26.66.50"/>
+         <property name="sessionId" value="8c40bda7-f284-48a0-9000-65cdee37928b"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/FirstTest" classname="Test Cases/FirstTest" status="PASSED">
+         <system-out><![CDATA[2019-05-02 18:12:40 - [TEST_CASE][PASSED] - Test Cases/FirstTest: Test Cases/FirstTest
+
+2019-05-02 18:12:41 - [TEST_STEP][PASSED] - openBrowser(null): Browser is opened with url: 'null'
+
+2019-05-02 18:12:42 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2019-05-02 18:12:42 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-02 18:12:49 - [MESSAGE][PASSED] - Browser is opened with url: 'null'
+
+2019-05-02 18:12:49 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/registration"): Navigate to 'http://localhost:8080/registration' successfully
+
+2019-05-02 18:12:50 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/registration' successfully
+
+2019-05-02 18:12:50 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-02 18:12:51 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-02 18:12:39 - [TEST_SUITE][PASSED] - Test: Test Cases/FirstTest]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

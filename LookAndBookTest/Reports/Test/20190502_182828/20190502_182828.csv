@@ -1,0 +1,6 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Test,Firefox 66.0,,2019-05-02 18:28:31,2019-05-02 18:28:58,26.317s,INCOMPLETE
+,,,,,,
+Test Cases/LoginTestCase,Firefox 66.0,,2019-05-02 18:28:32,2019-05-02 18:28:58,25.882s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 18:28:32,2019-05-02 18:28:38,5.813s,PASSED
+"click(findTestObject(""Object Repository/Page_Look a Book/a_Register""))",Firefox 66.0,,2019-05-02 18:28:38,2019-05-02 18:28:58,19.305s,FAILED

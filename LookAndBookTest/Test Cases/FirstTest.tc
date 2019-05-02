@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>First try at a test</description>
-   <name>FirstTest</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>37da5712-4147-4cdd-88a7-31460f7632b3</testCaseGuid>
-</TestCaseEntity>

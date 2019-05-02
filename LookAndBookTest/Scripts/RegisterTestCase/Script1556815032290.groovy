@@ -12,8 +12,18 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser(null)
+WebUI.openBrowser('')
+
 WebUI.navigateToUrl('http://localhost:8080/registration')
+
+WebUI.setText(findTestObject('Page_Register/input_Register_username'), 'username1')
+
+WebUI.setEncryptedText(findTestObject('Page_Register/input_Register_password'), 'M1Lnyl0phgn1JV2kuvT1pw==')
+
+WebUI.setEncryptedText(findTestObject('Page_Register/input_Register_passwordConfirm'), 'M1Lnyl0phgn1JV2kuvT1pw==')
+
+WebUI.click(findTestObject('Page_Register/button_register'))
 
 WebUI.closeBrowser()
