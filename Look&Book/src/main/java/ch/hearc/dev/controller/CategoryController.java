@@ -34,7 +34,7 @@ public class CategoryController {
 			
 		categoryService.saveCategory(category);
 		
-		return "index";
+		return "redirect:/dashboard";
 		
 	}
 	

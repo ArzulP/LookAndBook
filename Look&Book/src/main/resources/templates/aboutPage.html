@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>About</title>
-<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-	<div >
 		<nav th:replace="fragments/header :: header"></nav>
-		
-	<a href="https://www.freepik.com/free-photos-vectors/school">School photo created by freepik - www.freepik.com</a>
+		<div class="container">
+			<h1>About</h1>
+			<hr/>
+			<p class="lead">This web application was made by two He-arc students. It was done as part of a course. The technologies used were Spring development environment and the framework JEE.</p>
+		</div>
 		<footer th:replace="fragments/footer :: footer"></footer>
-	</div>
 </html>

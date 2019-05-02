@@ -2,23 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Look a Book</title>
-<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <header class="masthead mb-auto">
-    	<div class="inner">
-    		<nav th:replace="fragments/header :: header"></nav>
- 		</div>
- 	</header>
- 	<main class="inner cover" role="main">
- 		<h1 class="cover-heading">Look a book</h1>
+	<nav th:replace="fragments/header :: header"></nav>
+ 	<div class="container text-center">
+ 		<h1 class="cover-heading text-center">Look a book</h1>
  		<p class="lead">Welcome to the place where you will share and learn about books. 
  			Here, you will be able to find the unexpected or the thing stuck at on the tip of your tongue.	
  		</p>
- 	</main>
+ 	</div>
     <footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>
