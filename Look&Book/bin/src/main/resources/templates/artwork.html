@@ -3,9 +3,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Look&Book</title>
-<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
-<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div th:insert="fragments/header :: header"></div>
@@ -16,22 +13,15 @@
 			<tr>
 				<th scope="col">Title</th>
 				<th scope="col">Author</th>
-				<th scope="col">Detail</th>
 			</tr>
 		</thead>
 		<tbody>
-			<span th:each="artwork: ${artworks}">
-			<span th:if="${artwork.visible == true}">
-			<tr >
+			<tr th:each="artwork: ${artworks}">
 				<td th:text="${artwork.title}" />
 				<td th:text="${artwork.author}" />
-				<td><a th:href="@{'/artwork/' + ${artwork.id}}" >get detail</a></td>
 			</tr>
-			</span>
-			</span>
 		</tbody>
 	</table>
-	<a href="/artwork/form">Create a new artwork entry</a>
 	
     </div>
     <div th:insert="fragments/footer :: footer"></div>

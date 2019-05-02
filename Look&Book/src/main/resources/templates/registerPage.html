@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   	<head>
+      	<title>Register</title>
+      	<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
+		<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   	</head>
+   	<body>
+		<nav th:replace="fragments/header :: header"></nav>	
+		<div class="container">
+			<div class="row justify-content-center align-items-center" style="height:100vh">
+            	<div class="col-4">
+            		<div class="card">
+            			<div class="card-head text-center">
+            				<h1 class="text-center">Register</h1>
+            			</div>
+                    	<div class="card-body">
+							<form name='f'  th:action="@{/registration}" th:object="${userForm}" method="post">
+								<div class="form-group">
+					    			<input class="form-control" type="text" placeholder="Enter Username" name="username" autofocus="true" required  th:field="*{username}">
+									<p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+								</div>
+								<div class="form-group">
+					    			<input class="form-control" type="password" placeholder="Enter Password" name="password" required  th:field="*{password}">
+					    			<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+					    		</div>
+					    		<div class="form-group">
+					    			<input class="form-control" type="password" placeholder="Confirm your Password" name="confirmPassword" required th:field="*{passwordConfirm}">
+					    			<p th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}"></p>
+					    		</div>
+					    		<div class="form-group">
+					    			<button class="btn btn-primary" type="submit">register</button>
+					    			<input type="reset" value="Reset" />
+								</div>
+					      	</form>
+				      	</div>
+			      	</div>
+		      	</div>
+	      	</div>
+		</div>
+	</body>
+</html>

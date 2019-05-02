@@ -1,7 +1,6 @@
 package ch.hearc.dev.controller;
 
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import ch.hearc.dev.entity.Category;
 import ch.hearc.dev.repository.CategoryRepository;
 import ch.hearc.dev.services.CategoryService;
-
 
 @Controller
 public class CategoryController {
