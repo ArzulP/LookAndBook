@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:fragment="header">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div>
-
-		<!-- this is header -->
-		<nav class="navbar navbar-inverse">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" th:href="@{/}">Spring Boot</a>
-				</div>
-				<div id="navbar" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a th:href="@{/}">Home</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="header">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" th:href="@{/}">LookABook</a>
+		<div class="collapse navbar-collapse" id="navbarToggler">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	      		<li class="nav-item active">
+	        		<a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link" href="#">Link</a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link" th:href="@{/dashboard}">Administration</a>
+	      		</li>
+	    	</ul>
+	    	<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+	    		<li class="nav-item" th:if="${#request.userPrincipal == null}">
+			        <a class="nav-link" th:href="@{/login}">Login</a>
+			        <span th:if="${#request.userPrincipal != null}"></span>
+			    </li>
+		    	<li class="nav-item" th:if="${#request.userPrincipal == null}">
+		        	<a class="nav-link" th:href="@{/registration}">Register</a>
+		    	</li>
+			    <li class="nav-item" th:if="${#request.userPrincipal != null}">
+			        <a class="nav-link" th:href="@{/logout}">Logout</a>
+			    </li>
+	    	</ul>
+	  	</div>
+	</nav>
 </body>
 </html>

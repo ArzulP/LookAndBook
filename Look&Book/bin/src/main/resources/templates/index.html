@@ -1,15 +1,25 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Spring Security Tutorial</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Look a Book</title>
+  	<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <div th:insert="fragments/header :: header"></div>
-    <div class="container">
+    <nav th:replace="fragments/header :: header"></nav>
+ 	<div class="container">
     	<p>Get your greeting here</p>
+    </div>
+    <div class="container">
+    	<a href="/category/form">Create a new category!</a>
+    </div>
+    <div class="container">
+    	<a href="/artwork/form">Create a new artwork entry!</a>
+    </div>
+    <div class="container">
+    	<a href="/artworks">Check all artworks</a>
     </div>
     <div th:insert="fragments/footer :: footer"></div>
 </body>

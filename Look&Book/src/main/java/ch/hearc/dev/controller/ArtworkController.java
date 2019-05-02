@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.dev.entity.Artwork;
 import ch.hearc.dev.entity.Comment;
-import ch.hearc.dev.entity.User;
 import ch.hearc.dev.repository.ArtworkRepository;
 import ch.hearc.dev.services.ArtworkService;
 import ch.hearc.dev.services.CategoryService;
@@ -62,8 +61,6 @@ public class ArtworkController {
 		model.addAttribute("artwork", artworkService.findArtworkById(Long.parseLong(id)));
 		model.addAttribute("comments", commentService.findAllForArtId(Long.parseLong(id)));
 		model.addAttribute("newComment", new Comment());
-		//temporary
-		model.addAttribute("user", new User());
         return "artwork-detail";
 	}
 	

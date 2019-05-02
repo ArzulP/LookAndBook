@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Look&Book</title>
+</head>
+<body>
+    <div th:insert="fragments/header :: header"></div>
+    <div class="container">
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Author</th>
+				<th scope="col">Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td th:text="${artwork.title}" />
+				<td th:text="${artwork.author}" />
+				<td th:text="${artwork.description}" />
+				<td>
+				<form action="#" th:action="@{'/artwork/delete/' + ${artwork.id}}" th:method="post" >
+				  <button type="submit" id="submitButton">delete</button>
+				</form>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Comment</th>
+			</tr>
+		</thead>
+		<tbody>
+			<span th:each="comment: ${comments}">
+			<tr >
+				<td th:text="${comment.content}" />
+				<!-- faire le if ici -->
+				<td>
+				<form action="#" th:action="@{'/comment/delete/' + ${comment.id}}" th:method="post" >
+				  <button type="submit" id="submitButton">delete</button>
+				</form>
+				</td>
+			</tr>
+			</span>
+		</tbody>
+	</table>
+	
+	<form action="#" th:action="@{'/comment/insert/'+ ${artwork.id}}" th:object="${newComment}" method="post">
+    	<p>Content: <input type="text" th:field="*{content}" /></p>
+    	<input type="hidden" th:value="${artwork.id}" name="artwork" >
+    	
+		<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+	
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>
