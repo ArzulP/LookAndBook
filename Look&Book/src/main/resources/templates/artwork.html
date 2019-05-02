@@ -6,11 +6,15 @@
 <link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div th:insert="fragments/header :: header"></div>
     <div class="container">
-
+	<h2>List of books</h2>
+	<form class="float-right" name="addCat" th:action="@{/artwork/form}" method='GET'>
+		<button class="btn btn-primary float-right" type="submit">Add Book</button>
+	</form>
 	<table class="table">
 		<thead>
 			<tr>
@@ -25,14 +29,12 @@
 			<tr >
 				<td th:text="${artwork.title}" />
 				<td th:text="${artwork.author}" />
-				<td><a th:href="@{'/artwork/' + ${artwork.id}}" >get detail</a></td>
+				<td><a th:href="@{'/artwork/' + ${artwork.id}}" ><i class="fa fa-link"></i></a></td>
 			</tr>
 			</span>
 			</span>
 		</tbody>
-	</table>
-	<a href="/artwork/form">Create a new artwork entry</a>
-	
+	</table>	
     </div>
     <div th:insert="fragments/footer :: footer"></div>
 </body>

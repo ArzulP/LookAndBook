@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.dev.entity.Category;
+import ch.hearc.dev.entity.Comment;
 import ch.hearc.dev.repository.CategoryRepository;
 import ch.hearc.dev.services.CategoryService;
 
@@ -35,5 +36,17 @@ public class CategoryController {
 		
 		return "index";
 		
+	}
+	
+	@GetMapping("/category/{id}")
+    public String artwork(@PathVariable final String id, Model model) {
+		model.addAttribute("category", categoryService.findCategoryById(Long.parseLong(id)));
+        return "category-detail";
+	}
+	
+	@PostMapping("/category/delete/{id}")
+	private String deleteCategory(@PathVariable final String id){
+		categoryService.deleteById(Long.parseLong(id));
+	    return "redirect:/dashboard";
 	}
 }

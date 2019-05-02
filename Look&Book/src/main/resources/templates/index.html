@@ -1,26 +1,24 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Look a Book</title>
-  	<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
-	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>Look a Book</title>
+<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <nav th:replace="fragments/header :: header"></nav>
- 	<div class="container">
-    	<p>Get your greeting here</p>
-    </div>
-    <div class="container">
-    	<a href="/category/form">Create a new category!</a>
-    </div>
-    <div class="container">
-    	<a href="/artwork/form">Create a new artwork entry!</a>
-    </div>
-    <div class="container">
-    	<a href="/artworks">Check all artworks</a>
-    </div>
-    <div th:insert="fragments/footer :: footer"></div>
+    <header class="masthead mb-auto">
+    	<div class="inner">
+    		<nav th:replace="fragments/header :: header"></nav>
+ 		</div>
+ 	</header>
+ 	<main class="inner cover" role="main">
+ 		<h1 class="cover-heading">Look a book</h1>
+ 		<p class="lead">Welcome to the place where you will share and learn about books. 
+ 			Here, you will be able to find the unexpected or the thing stuck at on the tip of your tongue.	
+ 		</p>
+ 	</main>
+    <footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>

@@ -23,11 +23,26 @@
       				<div class="tab-pane fade show active" id="list-artwork" role="tabpanel" aria-labelledby="list-artwork-list">
 	      				<h2>New Artworks</h2>
 	      				<hr/>
-						<div class="list-group">
-							<div class="list-goup-item list-group-item-action" href="#">
-								
-							</div>
-						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Title</th>
+									<th scope="col">Author</th>
+									<th scope="col">Detail</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span th:each="artwork: ${artworks}">
+								<span th:if="${artwork.visible == false}">
+								<tr >
+									<td th:text="${artwork.title}" />
+									<td th:text="${artwork.author}" />
+									<td><a th:href="@{'/artwork/' + ${artwork.id}}" ><i class="fa fa-link"></i></a></td>
+								</tr>
+								</span>
+								</span>
+							</tbody>
+						</table>	
 					</div>
       				<div class="tab-pane fade" id="list-user" role="tabpanel" aria-labelledby="list-user-list">
       					<h2>Manage Users</h2>
@@ -43,11 +58,24 @@
 	      						</form>
       						</div>
       					</div>
-      					<div class="list-group">
-							<div class="list-goup-item list-group-item-action" th:each="category: ${categories}" href="#">
-								<span th:text="${category.name}"></span>
-								<span class="float-right" th:text="${category.description}"></span>
-							</div>
+      					<div class="container">
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">Title</th>
+										<th scope="col">Detail</th>
+									</tr>
+								</thead>
+								<tbody>
+									<span th:each="category: ${categories}">
+									<tr >
+										<td th:text="${category.name}" />
+										<td><a th:href="@{'/category/' + ${category.id}}" ><i class="fa fa-link"></i></a></td>
+									</tr>
+									</span>
+									</span>
+								</tbody>
+							</table>
 						</div>
       				</div>
     			</div>

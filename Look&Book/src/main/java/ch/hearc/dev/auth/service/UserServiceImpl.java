@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import ch.hearc.dev.auth.model.User;
 import ch.hearc.dev.auth.repository.RoleRepository;
 import ch.hearc.dev.auth.repository.UserRepository;
+import ch.hearc.dev.entity.Artwork;
 
 import java.util.HashSet;
 
@@ -30,4 +31,10 @@ public class UserServiceImpl implements UserService {
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
+
+	@Override
+	public Iterable<User> findAll() {
+		return userRepository.findAll();
+	}
+    
 }
