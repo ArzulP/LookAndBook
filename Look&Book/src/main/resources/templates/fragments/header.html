@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
-		<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
-		<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/webjars/jquery/3.4.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="header">
@@ -24,15 +24,15 @@
 	      		</li>
 	    	</ul>
 	    	<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-	    		<li class="nav-item">
-			        <a class="nav-link" th:if="${#request.userPrincipal == null}" th:href="@{/login}">Login</a>
-			        <span  th:if="${#request.userPrincipal != null}">Jean</span>
+	    		<li class="nav-item" th:if="${#request.userPrincipal == null}">
+			        <a class="nav-link" th:href="@{/login}">Login</a>
+			        <span th:if="${#request.userPrincipal != null}"></span>
 			    </li>
-			    	<li class="nav-item">
-			        	<a class="nav-link" th:if="${#request.userPrincipal == null}" th:href="@{/registration}">Register</a>
-			    	</li>
-			    <li class="nav-item">
-			        <a class="nav-link" th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>
+		    	<li class="nav-item" th:if="${#request.userPrincipal == null}">
+		        	<a class="nav-link" th:href="@{/registration}">Register</a>
+		    	</li>
+			    <li class="nav-item" th:if="${#request.userPrincipal != null}">
+			        <a class="nav-link" th:href="@{/logout}">Logout</a>
 			    </li>
 	    	</ul>
 	  	</div>
