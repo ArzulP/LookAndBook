@@ -15,21 +15,22 @@
 			<hr/>
 			<div class="media">
 				<div class="media-body">
-    			<h5 class="mt-0 mb-1" th:="${artwork.title}"></h5>
+    			<h5 class="mt-0 mb-1" th:text="${artwork.title}"></h5>
     			<p>Written by <span th:text="${artwork.author}"></span></p>
 				<br/>
 				<b>Description</b><br/>
 				<p th:text="${artwork.description}"></p>
   				</div>
-			</div>
-			<div class="float-right">
-				<form th:action="@{'/artwork/update/' + ${artwork.id}}" th:method="post" >
+  				<div class="float-right">
+				<form action="#" th:action="@{'/artwork/update/' + ${artwork.id}}" th:method="post" >
 					  <button class="btn" type="submit" id="submitButton">Make visible</button>
 				</form>
-				<form th:action="@{'/artwork/delete/' + ${artwork.id}}" th:method="post" >
+				<form action="#" th:action="@{'/artwork/delete/' + ${artwork.id}}" th:method="post" >
 					  <button class="btn btn-danger" type="submit" id="submitButton">delete</button>
 				</form>
 			</div>
+			</div>
+			
 		</div>
 		<hr/>
 		<div class="container">
